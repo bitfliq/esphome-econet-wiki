@@ -9,5 +9,5 @@ Object Strings
 
 | String  | Units | Gas Tankless | Heat Pump | Electric |
 | ------------- | ------------- |------------- |------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  | | | |
+| Content Cell  | Content Cell  | | | |
