@@ -7,7 +7,7 @@ Commands
 
 Object Strings
 
-| String  | Units |
+| String  | Units | Gas Tankless | Heat Pump | Electric |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
