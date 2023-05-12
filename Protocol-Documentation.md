@@ -7,3 +7,7 @@ Commands
 
 Object Strings
 
+| String  | Units |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
