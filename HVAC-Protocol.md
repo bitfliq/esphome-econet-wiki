@@ -82,7 +82,7 @@
 | `Off` | 4 | Off |
 
 ## HVAC Mode Command
-| Command | Type | Value | Description |
+| Command | Type | Value | Mode Name |
 | :---: |:---: | :---: | :---: |
 | `01.01.02.01.00.00.53.54.41.54.4D.4F.44.45.3F.80.00.00` | Float | 1 | Cooling |
 | `01.01.02.01.00.00.53.54.41.54.4D.4F.44.45.40.00.00.00` | Float | 2 |  Auto |
