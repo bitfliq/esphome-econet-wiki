@@ -2,8 +2,8 @@
 | Address | Description |
 | :---: |:---: | 
 | `0x340` | Wifi Module |
-| `Ox380` | Thermostat|
-| `Ox3c0` | Unknown for now |
+| `Ox380` | Thermostat |
+| `Ox3c0` | Air Handler |
 | `Ox400` | Unknown for now |
 
 ## Fan Modes
@@ -11,7 +11,7 @@
 | :---: |:---: | :---: |
 | `Auto` | 0 | Off |
 | `Low` | 1 | Low |
-| `Mediun.Lo` | 2 | Medium Low |
+| `Medium.Lo` | 2 | Medium Low |
 | `Medium` | 3 | Medium|
 | `Medium.Hi` | 4 | Medium-High |
 | `High` | 5 | High |
