@@ -4,7 +4,7 @@
 | `0x340` | Wifi Module |
 | `Ox380` | Thermostat |
 | `Ox3c0` | Air Handler |
-| `Ox400` | Unknown for now |
+| `Ox400` | Variable Speed Outdoor Unit |
 
 ## Fan Modes
 | Mode Name | Float # | Description |
