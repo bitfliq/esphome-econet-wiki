@@ -2,16 +2,16 @@
 | Address | Description |
 | :---: |:---: | 
 | `0x340` | Wifi Module |
-| `Ox380` | Thermostat |
-| `Ox3c0` | Air Handler |
-| `Ox400` | Variable Speed Outdoor Unit |
+| `Ox380` | Thermostat|
+| `Ox3c0` | Air handler |
+| `Ox400` | Heatpump |
 
 ## Fan Modes
 | Mode Name | Float # | Description |
 | :---: |:---: | :---: |
 | `Auto` | 0 | Off |
 | `Low` | 1 | Low |
-| `Medium.Lo` | 2 | Medium Low |
+| `Mediun.Lo` | 2 | Medium Low |
 | `Medium` | 3 | Medium|
 | `Medium.Hi` | 4 | Medium-High |
 | `High` | 5 | High |
@@ -31,7 +31,7 @@
 | Name | Description |
 | :---: | :---: |
 | `AUTOMODE` |  |
-| `AWAYMODE` |  | Whether the thermostat is in away mod|
+| `AWAYMODE` | Whether the thermostat is in away mode |
 | `COOLSETP` |  Cooling Set Point|
 | `DEADBAND` |  |
 | `FURNGFAN` |  |
@@ -74,7 +74,7 @@
 |`VACSTATE` | `08.82.00.00.00.03.4E.6F.20` | Enumerated Text | ? |
 
 <details>
-  <summary>Raw Data Request</summary>
+  <summary>Raw Data Response</summary>
   
 ## Command 6 0x380 to 0x340
 0C.82.00.00.01.07.43.6F.6F.6C.69.6E.67.01.15.07.80.00.00.42.80.00.00.07.80.00.00.40.00.00.00.0E.82.00.00.00.09.4F.66.66.20.20.20.20.20.20.07.80.00.00.42.74.00.00.0F.82.00.00.02.0A.4C.6F.77.20.43.6F.6F.6C.20.00.08.82.00.00.00.03.4F.66.66.07.80.00.00.42.39.3D.BF.07.80.00.00.42.80.52.4F.07.80.00.00.42.80.00.00.13.82.00.00.01.0E.43.6F.6F.6C.69.6E.67.20.20.20.20.20.20.20.0B.82.00.00.00.06.41.75.74.6F.20.20.0B.82.00.00.00.06.4F.66.66.20.20.20.08.82.00.00.00.03.4E.6F.20
@@ -103,3 +103,51 @@
 
 ## Thermostat Ack
 #### 80 00 03 40 00 80 00 03 80 00 01 00 00 06 01 BD 09
+
+# HVAC Diagnostic Data
+
+## Thermostat request for diagnostic data from air handler
+
+| Name | Description |
+| :---: | :---: |
+| `AAUX1CFM` |  |
+| `AAUX2CFM` |  |
+| `AAUX3CFM` | |
+| `AAUX4CFM` |  |
+| `AIRHSTAT` | |
+
+<details>
+  <summary>Raw Data Request</summary>
+  
+## Command 30 0x380 to 0x3c0
+AAUX1CFM to AAUX4CFM
+02.01.00.00.41.41.55.58.31.43.46.4D.00.00.41.41.55.58.32.43.46.4D.00.00.41.41.55.58.33.43.46.4D.00.00.41.41.55.58.34.43.46.4D
+## Command 30 0x380 to 0x3c0
+01.01.00.00.41.49.52.48.53.54.41.54
+</details>
+
+## Air handler response
+
+| Request | Response | Type | Value |
+| :---: | :---: |:---: | :---: |
+|`AAUX1CFM` | `07.80.00.00.44.C8.00.00` | Float | 1600 |
+|`AAUX2CFM` | `07.80.00.00.44.C8.00.00` | Float | 1600 |
+|`AAUX3CFM` | `07.80.00.00.44.48.00.00` | Float | 800 |
+|`AAUX4CFM` | `07.80.00.00.44.16.00.00` | Float | 600 |
+|`AIRHSTAT` | `See Raw Data Response` | ? | ? |
+
+<details>
+  <summary>Raw Data Response</summary>
+  
+## Command 6 0x3c0 to 0x380
+07.80.00.00.44.C8.00.00.07.80.00.00.44.C8.00.00.07.80.00.00.44.48.00.00.07.80.00.00.44.16.00.00
+## Command 6 0x3c0 to 0x380
+84.00.00.00.00.00.00.00.00.00.00.DB.01.08.07.00.00.00.00.00.00.00.00.40.06.40.06.00.00.00.00.00.00.00.00.00.00.00.00.00.00.41.43.2D.41.49.52.48.2D.30.30.2D.30.31.2D.31.30.00.42.48.AE.FC.42.55.55.20.C2.20.00.00.00.00.01.00.27.00.00.00.00.00.00.00.75.00.00.00.0A.A2.00.00.09.69.00.00.27.53.00.00.00.5E.00.00.01.DE.00.00.01.6B.00.00.44.F2.08.09.00.1A.82.05.00.00.00.00.00.00.00.00.00.00.00.00.00.00.00.01.01.00.00.42.C0.00.00.41.1B.F0.94.42.6E.87.17.42.47.8A.F2.43.1C.FD.68.00.00.00
+</details>
+
+## Thermostat request for diagnostic data from heatpump 
+
+
+
+
+## Heatpump response
