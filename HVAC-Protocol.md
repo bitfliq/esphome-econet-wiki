@@ -153,9 +153,9 @@
 | `ALARM_01` | |
 | `ALARM_01` |  |
 | `LOCKTIMR` | |
-| `TEMP_OAT` |  |
-| `TEMP_EVP` | |
-| `ODU_DEFR` | |
+| `TEMP_OAT` | Outdoor Air Temperature |
+| `TEMP_EVP` | Evaporator Temp |
+| `ODU_DEFR` | Outdoor Unit xyz?|
 
 <details>
   <summary>Raw Data Request</summary>
