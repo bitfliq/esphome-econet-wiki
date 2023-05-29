@@ -155,7 +155,7 @@
 | `LOCKTIMR` | Hold Off Timer |
 | `TEMP_OAT` | Outdoor Air Temperature |
 | `TEMP_EVP` | Evaporator Temp |
-| `ODU_DEFR` | Outdoor Unit xyz?|
+| `ODU_DEFR` | Outdoor Unit Defrost |
 | `ODURCS1H` | Low Cool Two Week Hours|
 | `ODURCS2H` | High Cool Two Week Hours |
 | `ODURHS1H` | Low Heat Two Week Hours |
