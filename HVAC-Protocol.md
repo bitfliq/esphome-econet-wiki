@@ -313,7 +313,6 @@ WLANSTAT: 6 (Connected  )
 |`MIN__RPM` | `07.80.00.00.44.C8.00.00` | Float | 1600 |
 |`CMP_TYPE` | `07.80.00.00.3F.80.00.00` | Float | 1 |
 |`U__INPUT` | `08.82.00.00.01.03.59.65.73` | ? | ? |
-| `ISCSPEED` | Inverter Crank Speed (RPM) |
 |`ISCSPEED` | `07.80.00.00.44.FF.60.00` | Float | 2043 |
 |`TEMP_CPT` | `07.80.00.00.42.4E.C3.97` | Float | 51.691 |
 |`EXACTUAL` | `07.80.00.00.42.C0.00.00` | Float | 96 |
