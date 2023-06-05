@@ -106,27 +106,43 @@ WLANSTAT: 6 (Connected  )
 ## Thermostat Request Data
 | Name | Description |
 | :---: | :---: |
-| `AUTOMODE` |  |
+| `AUTOMODE` | HVAC Operating Mode |
 | `AWAYMODE` | Whether the thermostat is in away mode |
-| `COOLSETP` |  Cooling Set Point|
+| `COOLSETP` |  Cooling Set Point |
 | `DEADBAND` |  |
 | `FURNGFAN` |  |
 | `HEATSETP` |  Heat Set Point |
 | `HVACMODE` | Running State (i.e. Low Cool) |
 | `HW_G_FAN` |  |
 | `RELH700` |  Relative Humidity |
-| `SPT_STAT` |  Current temperature|
-| `STATMODE` |  |
+| `SPT_STAT` |  Current temperature |
+| `STATMODE` | HVAC Set Mode |
 | `STATNFAN` |  | 
 | `STAT_FAN` |  |
 | `VACSTATE` |  Vacation state |
+| `DHUMENAB` |  Dehumidification Enabled|
+| `DHUMSETP` |  Dehumidification Set Point |
+| `DHUM_OCL` | Dehumidification Deviation below Set Temperature |
+| `DH_DRAIN` |  | 
+| `HUMDCNFG` | Humidifier Configured with the system |
+| `HUMDCTRL` |  Vacation state |
+| `HUMDSETP` |  | 
+| `HUMSMART` |  |
+| `AUTOTIME` |  Vacation state |
+| `SMARTREC` | Smart Recovery | 
+| `ALRMBEEP` |  |
+| `SCRNLOCK` |  Vacation state |
+
+
 
 
 <details>
   <summary>Raw Data Request</summary>
   
-## Command 30 0x340 to 0x380
+## Command 30 0x340 to 0x380 AUTOMODE to VACSTATE
 02.01.00.00.41.55.54.4F.4D.4F.44.45.00.00.41.57.41.59.4D.4F.44.45.00.00.43.4F.4F.4C.53.45.54.50.00.00.44.45.41.44.42.41.4E.44.00.00.46.55.52.4E.47.46.41.4E.00.00.48.45.41.54.53.45.54.50.00.00.48.56.41.43.4D.4F.44.45.00.00.48.57.5F.47.5F.46.41.4E.00.00.52.45.4C.48.37.30.30.35.00.00.53.50.54.00.00.00.00.00.00.00.53.50.54.5F.53.54.41.54.00.00.53.54.41.54.4D.4F.44.45.00.00.53.54.41.54.4E.46.41.4E.00.00.53.54.41.54.5F.46.41.4E.00.00.56.41.43.53.54.41.54.45 
+## Command 30 0x340 to 0x380 DHUMENAB to SCRNLOCK
+08.82.00.00.00.03.4E.6F.20.07.80.00.00.42.34.00.00.07.80.00.00.40.00.00.00.07.80.00.00.40.A0.00.00.08.82.00.00.00.03.4E.6F.20.12.82.00.00.00.0D.48.65.61.74.20.20.20.20.20.20.20.20.20.07.80.00.00.41.F0.00.00.0B.82.00.00.00.06.4F.66.66.20.20.20.07.80.00.00.40.A0.00.00.08.82.00.00.01.03.59.65.73.08.82.00.00.00.03.4E.6F.20.08.82.00.00.00.03.4E.6F.20
 
 </details>
 
@@ -148,12 +164,27 @@ WLANSTAT: 6 (Connected  )
 |`STATNFAN` | `0B.82.00.00.00.06.41.75.74.6F.20.20` | Enumerated Text | Auto |
 |`STAT_FAN` | `0B.82.00.00.00.06.4F.66.66.20.20.20` | Enumerated Text | Off |
 |`VACSTATE` | `08.82.00.00.00.03.4E.6F.20` | Enumerated Text | ? |
+`DHUMENAB` | `08.82.00.00.00.03.4E.6F.20` | Enumerated Text | No |
+|`DHUMSETP` | `07.80.00.00.42.34.00.00` | Float | 45 |
+|`DHUM_OCL` | `07.80.00.00.40.00.00.00` | Float | 2 |
+|`DH_DRAIN` | `07.80.00.00.40.A0.00.00` | Float | 5 |
+|`HUMDCNFG` | `08.82.00.00.00.03.4E.6F.20` | Enumerated Text | No |
+|`HUMDCTRL` | `12.82.00.00.00.0D.48.65.61.74.20.20.20.20.20.20.20.20.20` | Enumerated Text | Heat |
+`HUMDSETP` | `07.80.00.00.41.F0.00.00` | Float | 30 |
+|`HUMSMART` | `0B.82.00.00.00.06.4F.66.66.20.20.20` | Enumerated Text | Off |
+|`AUTOTIME` | `07.80.00.00.40.A0.00.00` | Float | 0 |
+|`SMARTREC` | `08.82.00.00.01.03.59.65.73` | Enumerated Text | Yes |
+|`ALRMBEEP` | `08.82.00.00.00.03.4E.6F.20` | Enumerated Text | No |
+|`SCRNLOCK` | `08.82.00.00.00.03.4E.6F.20` | Enumerated Text | No |
+
 
 <details>
   <summary>Raw Data Response</summary>
   
-## Command 6 0x380 to 0x340
+## Command 6 0x380 to 0x340 AUTOMODE to VACSTATE
 0C.82.00.00.01.07.43.6F.6F.6C.69.6E.67.01.15.07.80.00.00.42.80.00.00.07.80.00.00.40.00.00.00.0E.82.00.00.00.09.4F.66.66.20.20.20.20.20.20.07.80.00.00.42.74.00.00.0F.82.00.00.02.0A.4C.6F.77.20.43.6F.6F.6C.20.00.08.82.00.00.00.03.4F.66.66.07.80.00.00.42.39.3D.BF.07.80.00.00.42.80.52.4F.07.80.00.00.42.80.00.00.13.82.00.00.01.0E.43.6F.6F.6C.69.6E.67.20.20.20.20.20.20.20.0B.82.00.00.00.06.41.75.74.6F.20.20.0B.82.00.00.00.06.4F.66.66.20.20.20.08.82.00.00.00.03.4E.6F.20
+## Command 6 0x380 to 0x340 
+08.82.00.00.00.03.4E.6F.20.07.80.00.00.42.34.00.00.07.80.00.00.40.00.00.00.07.80.00.00.40.A0.00.00.08.82.00.00.00.03.4E.6F.20.12.82.00.00.00.0D.48.65.61.74.20.20.20.20.20.20.20.20.20.07.80.00.00.41.F0.00.00.0B.82.00.00.00.06.4F.66.66.20.20.20.07.80.00.00.40.A0.00.00.08.82.00.00.01.03.59.65.73.08.82.00.00.00.03.4E.6F.20.08.82.00.00.00.03.4E.6F.20
 </details>
 
 ## HVAC Modes
