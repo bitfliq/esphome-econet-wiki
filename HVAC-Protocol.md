@@ -125,13 +125,13 @@ WLANSTAT: 6 (Connected  )
 | `DHUM_OCL` | Dehumidification Deviation below Set Temperature |
 | `DH_DRAIN` |  | 
 | `HUMDCNFG` | Humidifier Configured with the system |
-| `HUMDCTRL` |  Vacation state |
+| `HUMDCTRL` |  |
 | `HUMDSETP` |  | 
 | `HUMSMART` |  |
-| `AUTOTIME` |  Vacation state |
+| `AUTOTIME` |  |
 | `SMARTREC` | Smart Recovery | 
 | `ALRMBEEP` |  |
-| `SCRNLOCK` |  Vacation state |
+| `SCRNLOCK` |  |
 
 
 
