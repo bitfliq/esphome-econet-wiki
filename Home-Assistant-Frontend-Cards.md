@@ -3,6 +3,13 @@
 
 ![Frontend Card Screenshot](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/Screenshot_20230606_055102_Home%20Assistant.jpg)
 
+### What's Displayed:
+- The state of the water heater compressor (`Currently: Idle` or `Currently: ON`)
+- The water heater set temperature
+- The state of the heating element
+- The current mode of the water heater
+- The available hot water
+
 There are a few dependencies to use the yaml provided to create this card.
 
 ### Dependencies:
