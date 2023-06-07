@@ -1,7 +1,7 @@
 
 ## Water Heater
 
-![[Screenshot_20230606_055102_Home Assistant.jpg]]
+!picture!
 
 There are a few dependencies to use the yaml provided to create this card.
 
