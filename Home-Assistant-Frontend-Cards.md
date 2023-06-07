@@ -111,7 +111,7 @@ cards:
     alignment: justify
     chips:
       - type: template
-        content: '{{states(entity) | float(0) | round(0) }} °F'
+        content: '{{ states(entity) | float(0) | round(0) }} °F'
         entity: sensor.econet_heatpump_water_heater_upper_tank_temperature
         icon: mdi:thermometer-water
         tap_action:
