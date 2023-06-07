@@ -1,12 +1,10 @@
 
-## Water Heater
-
-Mushroom Dark Theme       |  Waves Dark
+Mushroom Dark Theme       |  Waves Dark Theme
 :-------------------------:|:-------------------------:
 ![Mushroom Dark Theme](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/Screenshot_20230606_055102_Home%20Assistant.jpg) | ![Waves Dark](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/frontend-waves-dark.jpg) |
 
 
-### What's Displayed:
+### What's Displayed (Water Heater):
 - The state of the water heater compressor (`Currently: Idle` or `Currently: ON`)
 - The water heater set temperature
 - The state of the heating element
