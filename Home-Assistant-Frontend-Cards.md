@@ -1,7 +1,7 @@
 
 ## Water Heater
 
-!picture!
+![Frontend Card Screenshot](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/Screenshot_20230606_055102_Home%20Assistant.jpg)
 
 There are a few dependencies to use the yaml provided to create this card.
 
@@ -163,5 +163,5 @@ card_mod:
 
 ### Custom Pictures
 
-![[econet-water-heater.png]]
-![[rheem-econet-retst601sys-programmable-thermostat-hvac-png-favpng-60bssfnmHbgDNMqjPU9ZXHATB_adobe_express.png]]
+![Heat pump water heater](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/econet-heat-pump-water-heater.png)
+![Thermostat](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/rheem-econet-retst601-thermostat.png)
