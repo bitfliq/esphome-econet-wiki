@@ -23,6 +23,7 @@ A custom picture of the water heater is not required for the code to work simply
 
 <details>
   <summary>Water Heater YAML </summary>
+
 ```yaml
 type: custom:stack-in-card
 keep:
