@@ -10,9 +10,7 @@
 - The current mode of the water heater
 - The available hot water
 
-There are a few dependencies to use the yaml provided to create this card.
-
-### Dependencies:
+### Card Dependencies:
 - [Card mod](https://github.com/thomasloven/lovelace-card-mod)
 - [Mushroom Card](https://github.com/piitaya/lovelace-mushroom)
 - [Simple Thermostat](https://github.com/nervetattoo/simple-thermostat)
