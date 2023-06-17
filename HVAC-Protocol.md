@@ -114,7 +114,7 @@ WLANSTAT: 6 (Connected  )
 | `HEATSETP` |  Heat Set Point |
 | `HVACMODE` | Running State (i.e. Low Cool) |
 | `HW_G_FAN` |  |
-| `RELH700` |  Relative Humidity |
+| `RELH7005` |  Relative Humidity |
 | `SPT_STAT` |  Current temperature |
 | `STATMODE` | HVAC Set Mode |
 | `STATNFAN` |  | 
