@@ -229,6 +229,14 @@ WLANSTAT: 6 (Connected  )
 ## Thermostat Ack
 #### 80 00 03 40 00 80 00 03 80 00 01 00 00 06 01 BD 09
 
+## Dehumidification Commands
+| Name | Command | Type | Value |
+| :---: | :---: |:---: | :---: |
+| DHUMSETP | `01.01.00.01.00.00.44.48.55.4D.53.45.54.50.42.54.00.00` | Float | 53.00 |
+| DHUMSETP | `01.01.00.01.00.00.44.48.55.4D.53.45.54.50.42.54.00.00` | Float | 54.00 |
+| DHUMENAB  | `01.01.02.01.00.00.44.48.55.4D.45.4E.41.42.00.00.00.00` | Float | 0.00 |
+| DHUMENAB  | `01.01.02.01.00.00.44.48.55.4D.45.4E.41.42.3F.80.00.00` | Float | 1.00 |
+
 # HVAC Diagnostic Data
 
 ## Thermostat request for diagnostic data from air handler
