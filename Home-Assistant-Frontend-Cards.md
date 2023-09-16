@@ -31,6 +31,7 @@ A custom picture of the water heater is not required for the code to work simply
   <summary>Water Heater YAML </summary>
 
 ```yaml
+
 type: custom:stack-in-card
 keep:
   margin: false
@@ -94,12 +95,12 @@ cards:
             step_size: '1'
             control:
               preset:
-                eco: false
-                electric: false
-                heat_pump: false
-                high_demand: false
-                vacation: false
-                'off': false
+                Eco Mode: false
+                Electric: false
+                Heat Pump: false
+                High Demand: false
+                Vacation: false
+                'Off': false
               hvac:
                 auto: false
                 'off': false
@@ -117,7 +118,7 @@ cards:
     alignment: justify
     chips:
       - type: template
-        content: '{{ states(entity) | float(0) | round(0) }} °F'
+        content: '{{states(entity) | float(0) | round(0) }} °F'
         entity: sensor.econet_heatpump_water_heater_upper_tank_temperature
         icon: mdi:thermometer-water
         tap_action:
@@ -131,14 +132,14 @@ cards:
         entity: binary_sensor.econet_heatpump_water_heater_fan_control
         content: >
           {{
-          iif(states('binary_sensor.econet_heatpump_water_heater_heater_control')
-          == 'on','ON','OFF') }}
+          states('sensor.econet_heatpump_water_heater_water_heater_heating_element_state')
+          }}
         icon: mdi:heating-coil
         icon_color: >-
           {% set status =
-          states('binary_sensor.econet_heatpump_water_heater_heater_control') %}
-          {% if status == 'on' %} red {% elif status == 'off' %} gray {% else %}
-          blue {% endif %}
+          states('sensor.econet_heatpump_water_heater_water_heater_heating_element_state')
+          %} {% if status != 'Off' %} red {% elif status == 'Off' %} gray {%
+          else %} blue {% endif %}
         tap_action: none
       - type: template
         tap_action:
