@@ -1,7 +1,7 @@
 
 Mushroom Dark Theme       |  Waves Dark Theme
 :-------------------------:|:-------------------------:
-![Mushroom Dark Theme](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/Screenshot_20230606_055102_Home%20Assistant.jpg) | ![Waves Dark](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/frontend-waves-dark.jpg) |
+![Mushroom Dark Theme](https://github.com/esphome-econet/esphome-econet/assets/9987465/f30f3c85-622b-4ea7-87b7-1f542cff6d26) | ![Waves Dark](https://github.com/esphome-econet/esphome-econet/assets/9987465/beb66354-a930-48f2-8f71-bc775a27e8ac) |
 
 
 ### What's Displayed (Water Heater):
@@ -171,5 +171,5 @@ card_mod:
 
 ### Custom Pictures
 
-![Heat pump water heater](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/econet-heat-pump-water-heater.png)
-![Thermostat](https://github.com/stockmopar/esphome-econet/blob/main/frontend-cards/rheem-econet-retst601-thermostat.png)
+![Heat pump water heater](https://github.com/esphome-econet/esphome-econet/assets/9987465/a978e8c0-1579-4d8c-b758-06d66d353947)
+![Thermostat](https://github.com/esphome-econet/esphome-econet/assets/9987465/660d5826-180e-4b54-b27f-e30e4a89d2d3)
