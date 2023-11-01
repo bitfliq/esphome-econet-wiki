@@ -35,7 +35,7 @@ These schematics are based on https://github.com/syssi/esphome-solax-x1-mini and
 
 Please make sure to power the RS485 module with 3.3V because it affects the TTL (transistor-transistor logic) voltage between RS485 module and ESP.
 
-If you have a module with a flow control pin you need to the following in your yaml (you need to match the actual pin you used):
+If you have a module with a flow control pin you need to add the following in your yaml (you need to match the actual pin you used):
 
 ```yaml
 econet:
