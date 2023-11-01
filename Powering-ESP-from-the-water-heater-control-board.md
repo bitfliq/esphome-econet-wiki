@@ -1,5 +1,7 @@
 If you don't have an electrical outlet nearby to power the ESP board, none of the pins of the RJ12 port provide power, but you can get power from the water heater control board.
 
+If you have M5Stack A131 RS485 Base you should be able to power via the 12V test pad on the control board. If you have ESP32 or ESP8266 and a generic RS485 converter you can power via the 3.3V test pad.
+
 Thanks to elmoret at
 https://discord.com/channels/1148015790038188073/1148327349620838511/1162186716635988009
 
