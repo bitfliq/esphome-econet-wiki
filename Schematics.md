@@ -21,7 +21,7 @@ These schematics are based on https://github.com/syssi/esphome-solax-x1-mini and
 (This is for modules such as MAX485)
 
 ```text
-               RS485                        UART
+             RS485                        UART
   ┌─────┐              ┌─────────────┐           ┌─────────────────┐
   │     │              │           DI│<--------->│TX               │
 ┌-┘   3 │<-----B- ---->│  RS485    DE│<--\       │         ESP32/  │
