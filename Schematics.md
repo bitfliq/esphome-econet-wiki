@@ -24,8 +24,8 @@ These schematics are based on https://github.com/syssi/esphome-solax-x1-mini and
              RS485                        UART
   ┌─────┐              ┌─────────────┐           ┌─────────────────┐
   │     │              │           DI│<--------->│TX               │
-┌-┘   3 │<-----B- ---->│  RS485    DE│<--\       │         ESP32/  │
-|     4 │<---- A+ ---->│  to TTL   RE│<---+----->│GPIO0   ESP8266  │
+┌-┘   3 │<-----B- ---->│  RS485    DE│<--┐       │         ESP32/  │
+|     4 │<---- A+ ---->│  to TTL   RE│<--┴------>│GPIO0   ESP8266  │
 └-┐   5 │<--- GND ---->│  module   RO│<--------->│RX               │
   │     │              │             │           │                 │
   └─────┘              │          VCC│<--------->│3.3V          VCC│<--
