@@ -1,4 +1,4 @@
-These schematics are based on https://github.com/syssi/esphome-solax-x1-mini and https://github.com/KlausLi/Esp-Soyosource-Controller/blob/main/BastelPlan3000_Soyosource_Controller_by_BavarianSuperGuy.png
+These schematics are based on https://github.com/syssi/esphome-solax-x1-mini#schematics and https://github.com/KlausLi/Esp-Soyosource-Controller/blob/main/BastelPlan3000_Soyosource_Controller_by_BavarianSuperGuy.png
 
 #### RS485-TTL module without flow control pin
 
