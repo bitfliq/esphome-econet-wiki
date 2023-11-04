@@ -16,6 +16,8 @@ These schematics are based on https://github.com/syssi/esphome-solax-x1-mini#sch
 
 ```
 
+Note: for some RS485-TTL modules such as MAX13487 you need to connect the RX pin of the ESP board to the TX pin of the RS485-TTL module, and the TX pin to the RX pin, see wiring with photos [here](https://github.com/esphome-econet/esphome-econet/issues/130).
+
 #### RS485-TTL module with flow control pin
 
 (This is for modules such as MAX485)
