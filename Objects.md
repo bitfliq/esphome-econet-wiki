@@ -9,7 +9,7 @@ Object type | econet component
 Analog      | `sensor`
 Character String | `text_sensor`
 Binary      | `sensor` to get 0 or 1, `text_sensor` to get 'Off' or 'On', `switch` if access is R/W
-Multi-State | `sensor` to get enum index, `text_sensor` to get the enum text, `number` if access is R/W
+Multi-State | `sensor` to get enum index, `text_sensor` to get the enum text, `number` or `select` if access is R/W
 RAW         | `on_datapoint_update`
 
 e.g. for `WHTRCNFG` which is multi-state R/W you can use:
@@ -33,6 +33,18 @@ number:
     max_value: 100
     step: 1
     mode: box
+
+select:
+  - platform: econet
+    name: "WHTRCNFG select"
+    enum_datapoint: WHTRCNFG
+    options:
+      0: "Off"
+      1: "Eco Mode"
+      2: "Heat Pump"
+      3: "High Demand"
+      4: "Electric"
+      5: "Vacation"
 ```
 
 e.g. for `DEFAULTS` (be careful using this since it will clear model number and serial number) which is binary R/W you can have a hidden switch and a button that flips it:
@@ -77,3 +89,128 @@ sensor:
 You can use `request_mod` to group requests for some objects together. It defaults to 0. Objects with the same `request_mod` will be requested together. This is needed to make sure we get a response especially when requesting large string values. e.g. we can only request up to 2 alarm history objects. Anything more and there is no response. You can use `request_mod: none` if there is no need to request some objects. They will still be updated if another device, e.g. thermostat, requests these objects in the bus.
 
 You can use `request_once: true` for objects that aren't expected to change, e.g. serial number.
+
+## Water Heater
+
+The following list was obtained with:
+```bash
+curl https://upgrade.rheemcert.com/RH-WIFI-02-01-25.bin | strings -n 8 | grep -E '^[_A-Z]
+{8}$' | sort -u > water_heater_objects.txt
+```
+
+Object | Description
+------ | -----------
+ACFAILCT
+ALARMNUM
+ALARM_BC
+ALRMALRT
+APBATTMO
+APIRQDTE
+APIRQSRV
+API_SRVR
+APSNDNAK
+AP_RSPCT
+AUTH_HDR
+AWFLFAIL
+AWMACADR
+BADLNGTH
+BADOTHER
+BIOS_CRC
+BIOS_SIG
+BLSTRING
+BOOT_CRC
+CFCOMFST
+CFIDSTRT
+CLEAR_AP
+CLI_HALT
+CLNTSRVR
+CLOUDTMR
+CNAPSSID
+CNCONFIG
+CNLANTYP
+CNPSSWRD
+CN_BSSID
+CN_CHANL
+CONNPREV
+DEBUG_AP
+DFL_ENAB
+EE_WRITE
+ENSRVSEC
+ENSRVTMO
+FHCICJFK
+FLASHERA
+FL_FSGEN
+FORCERCV
+FTFS_CRC
+FWGENNUM
+FWUPGFLG
+HRSLOHTR
+HRSUPHTR
+INSTANCE
+LAST_ACK
+LMATIMER
+LMBRDMIN
+LMBRTIMR
+LMCONNEC
+LMTIMOUT
+LOHTRTMP
+MAINSCNT
+MAIN_CNT
+MARATHON
+MAXONOFF
+MAXONTIM
+MDEV_DMA
+MDEV_RTC
+MDEV_WDT
+MYENMSGS
+PFCFDLAY
+PRGMWCRC
+PRGM_CRC
+PRODLOCA
+PRODMODN
+PRODSERN
+PS_ENTER
+RECONDLY
+RESETDLY
+RTRY_LIM
+SAFEHILM
+SAFELOLM
+SCONTIME
+SECCOUNT
+SERIAL_N
+SHUTDOWN
+STARTUPR
+SVRBSYCT
+SVRNAKCT
+SVWRTCNT
+SW_VERSN
+SYN_RCVD
+SYN_SENT
+TSTALARM
+UAPDNTMO
+UAPTMREN
+UAP_INIT
+UPHTRTMP
+VACADAYS
+VACALEFT
+VACASAVE
+VACATIME
+VACATION
+VACA_NET
+WCONTIME
+WFFW_CRC
+WFGTWYAD
+WFIPADDR
+WFSECMOD
+WHTRCNFG
+WHTRCTRL
+WHTRENAB
+WHTRMODE
+WHTRSETP
+WLSTATUS
+WOLANTYP
+WOSCURTY
+WO_CHANL
+WSTIMOUT
+WSTMODEF
+WS_CLOSE
