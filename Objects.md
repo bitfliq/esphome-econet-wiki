@@ -94,7 +94,7 @@ You can use `request_once: true` for objects that aren't expected to change, e.g
 
 The following list was obtained with:
 ```bash
-curl https://upgrade.rheemcert.com/RH-WIFI-02-01-25.bin | strings -n 8 | grep -E '^[_A-Z]
+curl https://upgrade.rheemcert.com/RH-WIFI-02-01-25.bin | strings -n 8 | grep -E '^[_A-Z0-9]
 {8}$' | sort -u > water_heater_objects.txt
 ```
 
