@@ -90,6 +90,33 @@ You can use `request_mod` to group requests for some objects together. It defaul
 
 You can use `request_once: true` for objects that aren't expected to change, e.g. serial number.
 
+## Home Assistant Services
+
+To try out new object strings:
+
+1. Navigate to <http://homeassistant.local:8123/developer-tools/event>, in the **Listen to events** enter `esphome.econet_event` and click on **start listening**.
+
+2. In a separate tab navigate to <http://homeassistant.local:8123/developer-tools/service> and make a read request for the object. e.g.
+
+```yaml
+service: esphome.econet_hpwh_read
+data:
+  datapoint_id: ALARM_BC
+```
+
+3. Go to the first tab and you should see an event with the response. e.g.
+
+```yaml
+event_type: esphome.econet_event
+data:
+  datapoint_id: ALARM_BC
+  type: ENUM_TEXT
+  value: "0"
+  value_string: "No"
+```
+
+If you want to write a value you can use the `esphome.econet_hpwh_write_float` or `esphome.econet_hpwh_write_enum` services.
+
 ## Water Heater
 
 The following list was obtained with:
