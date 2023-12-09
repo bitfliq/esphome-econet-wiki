@@ -37,4 +37,4 @@ Cut the connector off one one end of the RJ11/12 cable, then strip and connect t
 
 This picture shows a correctly wired setup. While wire colors can vary, this images shows the most common color layout reported by users (Green -> B, Red -> A, Black -> GND):
 
-<img src="https://github.com/esphome-econet/econet-docs/blob/main/photos/Correctly-Wired-K045.jpeg?raw=true" alt="A correctly wired K045 unit." width=50%>
+<img src="https://github.com/esphome-econet/econet-docs/blob/main/photos-and-screenshots/Correctly-Wired-K045.jpeg?raw=true" alt="A correctly wired K045 unit." width=50%>
