@@ -18,6 +18,8 @@ ethernet:
  platform: !remove wifi_signal
 ```
 
+_Note: Remove directives require ESPHome >= 2023.12.0_
+
 ## m5Stack ATOM Lite Customizations
 
 ```yaml
